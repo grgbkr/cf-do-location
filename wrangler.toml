@@ -1,0 +1,17 @@
+name = "cf-do-location-test"
+main = "src/index.ts"
+compatibility_date = "2022-06-03"
+
+[durable_objects]
+bindings = [
+  { name = "locationTestDO", class_name = "LocationTestDO" },
+  { name = "locationTest2DO", class_name = "LocationTest2DO" },
+]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["LocationTestDO"]
+
+[[migrations]]
+tag = "v2"
+new_classes = ["LocationTest2DO"]
